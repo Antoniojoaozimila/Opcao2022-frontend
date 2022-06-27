@@ -1,0 +1,38 @@
+.container-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 100vw;
+}
+
+.container-menu .carousel {
+  min-height: 250px;
+  min-width: fit-content;
+}
+
+.container-grid {
+  justify-content: center;
+  background-color: rgba(0, 255, 255, 0.459);
+}
+
+.container-menu .css-92956q-MuiGrid-root {
+  padding: 10px !important;
+}
+
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ddedf9;
+  justify-content: center;
+  text-align: center;
+  height: 7rem;
+}
+.container-1 a {
+  margin-top: 2rem;
+}
+
+.container-1:hover {
+  border: 5px solid rgba(10, 161, 221, 0.911);
+  transform: scale(1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}

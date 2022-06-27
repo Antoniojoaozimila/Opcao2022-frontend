@@ -1,0 +1,7 @@
+.container-denuncias{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    margin-top: 3rem;
+}
