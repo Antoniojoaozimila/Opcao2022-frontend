@@ -3,7 +3,11 @@ import { ErrorMessage, Formik, Form, Field } from "formik";
 import Axios from "axios";
 import "./Singnin.css";
 
+import { Link, useNavigate } from "react-router-dom";
+
 const Singnin = () => {
+
+  const navigate = useNavigate();
 
  const handleLogin = (values) => {
     Axios.post("http://localhost:21262/login", {
@@ -11,6 +15,11 @@ const Singnin = () => {
       password: values.password,
     }).then((response) => {
       alert(response.data.msg);
+      if (response.data.msg==="Usuário logado") {
+         navigate("/home");
+      } else {
+         navigate("/");
+      }
     });
   };
 
@@ -22,6 +31,7 @@ const Singnin = () => {
     }).then((response) => {
       alert(response.data.msg);
       console.log(response);
+
     });
   };
   const validationsLogin = yup.object().shape({

@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import NavBar from "../../Components/NavBAr/ResponsiveAppBar";
 
 const responsive = {
   desktop: {
@@ -29,6 +30,7 @@ const responsive = {
 const HomePage = () => {
   return (
     <section className="container-menu">
+      <NavBar />
       <div className="carousel">
         <Carousel responsive={responsive} autoPlaySpeed={10000} infinite={true}>
           <div

@@ -1,0 +1,10 @@
+.NavBar{
+    background-color: #008cffcc !important;
+    position-: fixed !important;
+}
+
+.NavBar .navbar-light .navbar-nav .nav-link{
+    color: black;
+    
+
+}
