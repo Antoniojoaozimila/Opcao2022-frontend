@@ -12,12 +12,12 @@ function Maps({ lant, long }) {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyC7c8qLV0vBUPgQbJp-CQrOgl41lbJJo88",
+    googleMapsApiKey: "AIzaSyBlo2Bml6zmqP1_xtT3aLybZdWZNP7l8CM",
   });
   const [map, setMap] = React.useState(null);
   const center = {
-    lat: -25.9530206,
-    lng: 32.5711991,  
+    lat: 123,
+    lng: 134,  
   };
   
   const onLoad = React.useCallback(function callback(map) {

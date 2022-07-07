@@ -20,7 +20,7 @@ function ResponsiveAppBar() {
     const logout = () => {
        
         setAuth(null)
-        navigate('/signin')
+        navigate("/")
     }
   
   const { data, loading } = useFetch('denuncias');
@@ -45,8 +45,8 @@ function ResponsiveAppBar() {
                                     <MailIcon color="action" />
                                 </Badge>
                               
-                                <Avatar className='mx-2' sx={{ width: 24, height: 24 }} alt={auth?.user} src="/static/images/avatar/1.jpg" />
-                                <NavDropdown className='mr-5' title={auth?.user} id="navbarScrollingDropdown">
+                                <Avatar className='mx-2' sx={{ width: 24, height: 24 }} alt={auth?.nome} src="/static/images/avatar/1.jpg" />
+                                <NavDropdown className='mr-5' title={auth?.nome} id="navbarScrollingDropdown">
                                     <NavDropdown.Item>Perfil</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item onClick={() => logout()}>Sair</NavDropdown.Item>

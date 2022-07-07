@@ -3,7 +3,7 @@ import App from "../App";
 import Usuario from "../Pages/Usuarios/Usuario";
 import Signin from "../Components/Singin/Singin";
 import HomePage from "../Pages/HomeUser/HomePage";
-import Denuncias from "../Pages/Denuncias/Denuncias"
+import Denuncias from "../Pages/Denuncias/Denuncias";
 
 const Router = () => {
   return (

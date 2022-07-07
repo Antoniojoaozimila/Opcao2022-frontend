@@ -2,6 +2,7 @@ import * as yup from "yup";
 import { ErrorMessage, Formik, Form, Field } from "formik";
 import Axios from "axios";
 import "./Singnin.css";
+import Location from "../../Components/Geolocation/Geolocalizacao"
 
 import { Link, useNavigate } from "react-router-dom";
 
@@ -92,7 +93,7 @@ const Singnin = () => {
             Login
           </button>
         </Form>
-          </Formik>
+      </Formik>
           
  {/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/}
 

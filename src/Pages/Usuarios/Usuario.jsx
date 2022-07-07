@@ -1,35 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { Button, Form, TextField } from "react-bootstrap";
+import { Button, Dropdown, Form, TextField } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 import Navbar from "../../Components/NavBAr/ResponsiveAppBar";
 import "./Usuario.css";
 
 import Axios from "axios";
 
-
 import Maps from "../../Components/Maps/Maps";
 import { send } from "emailjs-com";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 const Usuario = () => {
   const [lista, setLista] = useState("");
   const [toKeep, setToKeep] = useState([]);
- 
 
   const [toSend, setToSend] = useState({
     nome: "",
     email: "",
     contacto: "",
     mensagem: "",
-    file:null,
+    file: null,
+    resp:"",
   });
-
-
 
   const handlerChange = (chave, e) => {
     setToSend({ ...toSend, [chave]: e.target.value });
-    setToSend({ ...toSend, ["file"]:URL.createObjectURL(e.target.files[0] )});
+    setToSend({ ...toSend, ["file"]: URL.createObjectURL(e.target.files[0]) });
   };
   console.log(lista);
   const handleSubmit = (e) => {
@@ -120,12 +117,26 @@ const Usuario = () => {
             <Button variant="primary" type="submit">
               enviar
             </Button>
+
+         
           </Form>
         </div>
+           <div>
+          <select    name="resp" onChange={(e)=>handlerChange("resp",e)}>
+            <option value="">Selecione um responsavel</option>
+            <option value="antoniojoaozimila@gmail.com">antoniojoaozimila@gmail.com</option>
+            <option value="antonio.zimila@uem.ac.mz">antonio.zimila@uem.ac.mz</option>
+          </select>
+        </div>
+        
         <div className="uploadSection">
           <div className="uploadForm">
             <label>Imagen</label>
-            <input type="file" name="file" onChange={(e) => handlerChange("file", e)} />
+            <input
+              type="file"
+              name="file"
+              onChange={(e) => handlerChange("file", e)}
+            />
             <br />
             <br />
             <img src={toSend.file} />
@@ -140,6 +151,7 @@ const Usuario = () => {
         <p>email:{toSend.email}</p>
         <p>contacto:{toSend.contacto}</p>
         <p>mensagem:{toSend.mensagem}</p>
+        <p>same:{ toSend.resp  }</p>
       </div>
     </div>
   );
