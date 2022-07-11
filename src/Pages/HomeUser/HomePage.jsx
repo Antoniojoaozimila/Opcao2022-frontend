@@ -131,7 +131,7 @@ const HomePage = () => {
           <Grid item xs={6}>
             <div className="container-1 a">
               {" "}
-              <a href="#">Qualidade da agua</a>
+              <a href="/denuncias">Denuncias feitas</a>
             </div>
           </Grid>
           <Grid item xs={6}>

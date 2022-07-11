@@ -1,11 +1,13 @@
 import React, { Component, useEffect, useState } from "react";
 import { render } from "react-dom";
-import Maps from "../Maps/Maps";
+//import Maps from "../Maps/Maps";
+//import Usuario from "../../Pages/Usuarios/Usuario"
 import Geocode from "react-geocode";
 
 const Geolocalizacao = () => {
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
+  const [cidade, setCidade] = useState(null);
 
   const getLocation = (x, y) => {
     setLat(x);
@@ -50,6 +52,7 @@ const Geolocalizacao = () => {
           }
           console.log(city, state, country);
           console.log(address);
+          setCidade(country);
         },
         (error) => {
           console.error(error);
@@ -60,7 +63,7 @@ const Geolocalizacao = () => {
   });
   return (
     <>
-      <Maps lant={lat} long={long} />
+    
     </>
   );
 };

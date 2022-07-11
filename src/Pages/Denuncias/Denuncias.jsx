@@ -13,7 +13,8 @@ const Denuncias = () => {
     "Email",
     "Contacto",
     "Mensagem",
-    "IMG",
+    "data",
+    "localizacao",
   ];
 
   const tableRows = () => {
@@ -27,6 +28,8 @@ const Denuncias = () => {
           denuncias.email,
           denuncias.contacto,
           denuncias.mensagem,
+          denuncias.data,
+          denuncias.localizacao
         ]);
       }
     }

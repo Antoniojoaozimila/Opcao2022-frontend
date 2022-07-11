@@ -5,6 +5,7 @@ import "./Singnin.css";
 import Location from "../../Components/Geolocation/Geolocalizacao"
 
 import { Link, useNavigate } from "react-router-dom";
+import Map2 from "../../Components/Maps/Map2"
 
 const Singnin = () => {
 
@@ -143,6 +144,8 @@ const Singnin = () => {
           </button>
         </Form>
       </Formik>
+
+     
     </div>
   );
 };
